@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso Javascript - Operadores Lógicos</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		//	AND 	||		Todas as condições precisam atender as exigências
+		//	OR		&&		Apenas uma condição precisa atender as exigências
+		//	NOT		!		verifica desigualdade.
+
+		var sexo = "O";
+		var idade = 29;
+
+
+
+		// Operadores AND
+		if (sexo === 'M' && idade >= 18) {
+			console.log('Maior de 18 anos e do Sexo Masculino ');
+		}
+
+		// Operadores OR
+		if (sexo === 'M' || idade >= 18) {
+			console.log('é maior de 18 anos ou é Sexo Masculino');
+		}
+
+		// Operadores NOT
+			//verifica se o sexo possui TIPO e CONTEUDO DIFERENTE de M
+		if (sexo !== 'M') {
+			console.log('Sexo possui tipo de variavel diferente e sexo diferente de masculino');
+		}
+	</script>
+
+</body>
+</html>
