@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso Javascript - Manipulando DOM - Lidando com Elementos</title>
+</head>
+<body>
+
+	<div id="app">
+        
+    </div>
+
+
+    <script type="text/javascript">
+        
+        var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'http://www.arturebrandao.com.br');
+            linkElement.setAttribute('title', 'Site pessoal do desenvolvedor');
+            linkElement.setAttribute('target', '_blank');
+
+        var textElement = document.createTextNode('Site do Desenvolvedor');
+            linkElement.appendChild(textElement);
+
+        var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+	</script>
+
+</body>
+</html>
