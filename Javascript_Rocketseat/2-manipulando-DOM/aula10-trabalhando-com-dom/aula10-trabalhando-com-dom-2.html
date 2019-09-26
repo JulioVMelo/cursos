@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso Javascript - Manipulando DOM - Eventos Inline 2</title>
+</head>
+<body>
+
+	<div id="app">
+        <input type="text" name="nome">
+        <button class="botao">Adicionar</button>
+	</div>
+
+
+    <script type="text/javascript">
+
+        inputElement = document.querySelector('input[name=nome]');
+        btnElement = document.querySelector('button.botao');
+
+        btnElement.onclick = function(){
+            var textInput = inputElement.value;
+            alert(textInput);
+        }
+        
+	</script>
+
+</body>
+</html>

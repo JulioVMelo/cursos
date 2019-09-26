@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso Javascript - Manipulando DOM - Eventos Inline</title>
+</head>
+<body>
+
+	<div id="app">
+        <!-- input para exemplos: getElementsByTagName | getElementById | getElementsByClassName -->
+        <!-- <input type="text" name="nome" id="nome" class="nome"> -->
+
+        <!-- input para exemplos: querySelector -->
+        <input type="text" name="nome">
+        <input type="text" name="nome">
+        
+
+        <button class="botao">Adicionar</button>
+	</div>
+
+
+    <script type="text/javascript">
+        //Retorna array com todos os elementos input do corpo da página
+        var inputElement = document.getElementsByTagName('input');
+        
+        //Retorna array com apenas o primeiro elemento input da página
+        var inputElement = document.getElementsByTagName('input')[0];
+
+        //Retorna o único elemento que possui ID 'nome'
+        var inputElement = document.getElementById('nome');
+
+        //Retorna array com todos os elementos que possui CLASS 'nome'
+        var inputElement = document.getElementsByClassName('nome');
+        
+        //Retorna array com apenas o primeiro elemento que possui CLASS 'nome'
+        var inputElement = document.getElementsByClassName('nome')[0];
+
+
+        //querySelector permite percorrer caminho até o elemento desejado
+        var inputElement = document.querySelector('div#app input[name=nome]');
+        var inputElement = document.querySelector('div#app input');
+
+        //querySelectorAll permite percorrer caminho até o elemento desejado, mas diferente do querySelector, retorna um array com todos os elementos encontrados.
+        var inputElement = document.querySelectorAll('div#app input');
+        var inputElement = document.querySelectorAll('div#app input[name=nome]');
+
+        console.log(inputElement);
+	</script>
+
+</body>
+</html>
