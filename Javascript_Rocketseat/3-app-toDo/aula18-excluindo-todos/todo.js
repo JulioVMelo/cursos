@@ -3,7 +3,7 @@ var inputElement = document.querySelector('#app input');
 var buttonElement = document.querySelector('#app button');
 
 //  Array com carga inicial
-var todos = [
+const todos = [
     'Fazer café',
     'Estudar Javascript',
     'Acessar comunidade Rocketseat'
@@ -26,18 +26,18 @@ function renderTodos(){
 
         
         //  Criando elemento de link <a>
-        var linkElement = document.createElement('a');
+        const linkElement = document.createElement('a');
             //  Setando atributo 'href' ao elemento <a>
             linkElement.setAttribute('href','#');
         
         //  Criando texto do elemento <a>
-        var linkText = document.createTextNode('Excluir');
+        const linkText = document.createTextNode('Excluir');
             //  Inserindo texto clicável 'linkText' ao item <a> 'linkElement'
             linkElement.appendChild(linkText);
 
 
         // Retornar a posição no array 'todos' onde o texto seja igual (indexOf) ao item individual presente na variável 'todo'
-        var posicao = todos.indexOf(todo);
+        const posicao = todos.indexOf(todo);
         // Criando atributo onclick no <a> chamando a funcao 'deleteTodo' passando o indice do item no array via variável 'posicao'.
         linkElement.setAttribute('onclick', 'deleteTodo('+ posicao +')');
 
@@ -59,7 +59,7 @@ renderTodos();
 function addTodo(){
 
     //  Recuperando o valor informado no input
-    var todoText = inputElement.value;
+    const todoText = inputElement.value;
 
     //  Adicionando ao array 'todos' no final da fila (push) o conteudo informado via input armazenado na variavel 'todoText'.
     todos.push(todoText);
